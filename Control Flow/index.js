@@ -153,26 +153,65 @@
  
                  // **  else if
 
- let signal = "green";
+//  let signal = "green";
 
- if(signal == "red"){
+//  if(signal == "red"){
 
-    console.log("please Stop");
+//     console.log("please Stop");
 
- }else if(signal == "yellow"){
+//  }else if(signal == "yellow"){
 
-    console.log("Get Ready");
+//     console.log("Get Ready");
 
- }else if(signal == "green"){
+//  }else if(signal == "green"){
 
-    console.log("Gooooooo");
+//     console.log("Gooooooo");
 
- }else{
+//  }else{
 
-    console.log("please chechk the signal input");
- }
+//     console.log("please chechk the signal input");
+//  }
 
  // ** End of If , Eles iF (Conditional Statement)
 
- 
 
+
+   // ** Start of Logical oparators 
+
+               // * &&             
+
+//    let password = "1234678";
+
+//    if(password.length >= 8 && password.includes("@")){
+//      console.log("Strong Password");
+//    }else if(password.length >= 5 && password.length < 8){
+//        console.log("Mediam Strong Password");
+//    }else{
+//     console.log("Weak pasowrd");
+//    }
+              // * ||  
+
+//    let password = "12344323";
+
+//    if(password.length >= 12 || password.length >= 8 && password.includes("@")){
+//      console.log("Strong Password");
+//    }else if(password.length >= 5 &&  password.length <= 8){
+//        console.log("Mediam Strong Password");
+//    }else{
+//     console.log("Weak pasowrd");
+//    }
+   
+           // ** Logical Not 
+   // used to revers boolens
+    // console.log(!true);
+    // console.log(!false);
+   
+ let loggedIn = true
+
+  if(!loggedIn){
+        console.log("Hellow!");    
+  }else {
+    console.log("Else case!")
+  }
+
+  // ** End of Logical Oparators
