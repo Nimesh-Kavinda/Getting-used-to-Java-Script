@@ -215,3 +215,96 @@
 //   }
 
   // ** End of Logical Oparators 
+
+  // ** Break and Continue Statements
+    
+    // let ratings = [7, 8, 5, 3, 0, 6, 10, 7, 8];
+
+    // for(let i =0 ; i < ratings.length; i++){
+        
+    //     if(ratings[i] == 0){
+    //         console.log(`Rating: ${ratings[i]} - Skip `)
+    //         continue;   // continue above statement and going to next iteration skipping below statements
+    //     }
+
+    //     if(ratings[i] == 10){
+    //         console.log(`Rating: ${ratings[i]} - Must Watched` )
+    //         break;    // Stop entire Loop
+    //     }
+
+
+    //     console.log(`Rating: ${ratings[i]}`)
+
+    // }
+
+    // ** End of Break and Continue Statements
+
+    // ** Start of Switch Statement
+
+let rating = 5;
+
+    // if(rating == 5){
+    //     console.log("Must Watch")
+    // }else if(rating == 4){
+    //     console.log("Good opinion");
+    // }else if(rating == 3){
+    //     console.log("Maybe");
+    // }else if(rating == 2){
+    //     console.log("Skip");
+    // }else if(rating == 1){
+    //     console.log("ignore");
+    // }else{
+    //     console.log("Invalid")
+    // }
+
+    // lets try above if in Switch
+
+   switch(rating){
+          
+    case 5:
+        console.log("Must watch");
+        break;
+    case 4:
+        console.log("Good Opiniom");
+        break;
+    case 3:  
+        console.log("Maybe");
+        break;
+    case 2:
+        console.log("Skip");
+        break;
+    case 1:
+        console.log("Ignore");
+        break;
+    default:
+        console.log("invalid");            
+        
+
+   }
+
+   let grade = "A";
+
+   switch(grade){
+          
+    case "A":
+        console.log("Must watch");
+        break;
+    case "B":
+        console.log("Good Opiniom");
+        break;
+    case "C":  
+        console.log("Maybe");
+        break;
+    case "D":
+        console.log("Skip");
+        break;
+    case "E":
+        console.log("Ignore");
+        break;
+    default:
+        console.log("invalid");            
+        
+
+   }
+
+    
