@@ -104,14 +104,75 @@
 
 // how to run above while loop in do while
 
-let count = 0;
-do{
- console.log(count);
- count++;
-}while(count < 5);
+// let count = 0;
+// do{
+//  console.log(count);
+//  count++;
+// }while(count < 5);
 
-// Do while loop run it first time surely without checking condition
+// // Do while loop run it first time surely without checking condition
   
- console.log("Out of loop");
+//  console.log("Out of loop");
  
  // ** End of do while loop
+
+ // ** If , else & else if Statements (Conditional Statement)
+
+        // ** If
+//  let score = 9; 
+
+//  if(score > 7){ // Condtion
+//     console.log("Good Job !") // statement wehn run the condition when true
+
+//  }
+
+// const students = ["Nimesh", "Dimuth", "Tharuka", "Kavinda"];
+
+// if(students.length > 0){
+//     console.log("We have a Class today");
+// }
+                  //** else */
+
+
+//        let score = 5; 
+
+//  if(score > 7){ 
+//     console.log("Good Job !") 
+
+//  }else{
+//     console.log("All the best for the next one");
+//  }
+
+// const loggedIn = true;
+
+// if(loggedIn){
+//   console.log("Welcome");
+// }else{
+//     console.log("Please login First");
+// }
+ 
+                 // **  else if
+
+ let signal = "green";
+
+ if(signal == "red"){
+
+    console.log("please Stop");
+
+ }else if(signal == "yellow"){
+
+    console.log("Get Ready");
+
+ }else if(signal == "green"){
+
+    console.log("Gooooooo");
+
+ }else{
+
+    console.log("please chechk the signal input");
+ }
+
+ // ** End of If , Eles iF (Conditional Statement)
+
+ 
+
