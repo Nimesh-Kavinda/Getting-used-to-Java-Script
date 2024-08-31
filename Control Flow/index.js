@@ -206,12 +206,12 @@
     // console.log(!true);
     // console.log(!false);
    
- let loggedIn = true
+//  let loggedIn = true
 
-  if(!loggedIn){
-        console.log("Hellow!");    
-  }else {
-    console.log("Else case!")
-  }
+//   if(!loggedIn){
+//         console.log("Hellow!");    
+//   }else {
+//     console.log("Else case!")
+//   }
 
-  // ** End of Logical Oparators
+  // ** End of Logical Oparators 
