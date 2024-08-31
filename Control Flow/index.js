@@ -241,7 +241,7 @@
 
     // ** Start of Switch Statement
 
-let rating = 5;
+// let rating = 5;
 
     // if(rating == 5){
     //     console.log("Must Watch")
@@ -259,52 +259,101 @@ let rating = 5;
 
     // lets try above if in Switch
 
-   switch(rating){
+//    switch(rating){
           
-    case 5:
-        console.log("Must watch");
-        break;
-    case 4:
-        console.log("Good Opiniom");
-        break;
-    case 3:  
-        console.log("Maybe");
-        break;
-    case 2:
-        console.log("Skip");
-        break;
-    case 1:
-        console.log("Ignore");
-        break;
-    default:
-        console.log("invalid");            
+//     case 5:
+//         console.log("Must watch");
+//         break;
+//     case 4:
+//         console.log("Good Opiniom");
+//         break;
+//     case 3:  
+//         console.log("Maybe");
+//         break;
+//     case 2:
+//         console.log("Skip");
+//         break;
+//     case 1:
+//         console.log("Ignore");
+//         break;
+//     default:
+//         console.log("invalid");            
         
 
-   }
+//    }
 
-   let grade = "A";
+//    let grade = "A";
 
-   switch(grade){
+//    switch(grade){
           
-    case "A":
-        console.log("Must watch");
-        break;
-    case "B":
-        console.log("Good Opiniom");
-        break;
-    case "C":  
-        console.log("Maybe");
-        break;
-    case "D":
-        console.log("Skip");
-        break;
-    case "E":
-        console.log("Ignore");
-        break;
-    default:
-        console.log("invalid");            
+//     case "A":
+//         console.log("Must watch");
+//         break;
+//     case "B":
+//         console.log("Good Opiniom");
+//         break;
+//     case "C":  
+//         console.log("Maybe");
+//         break;
+//     case "D":
+//         console.log("Skip");
+//         break;
+//     case "E":
+//         console.log("Ignore");
+//         break;
+//     default:
+//         console.log("invalid");            
         
 
-   }
+//    }
 
+// ** Scope Global (globel and local scope)
+
+// let score = 70;
+
+//   if(score < 80){
+//     let inside80 = 80;
+//     score = 50; // over reading globel variabel in inside of the block
+//     console.log("Inside < 80 Block" ,score, inside80, );
+
+//        if(score > 65){
+//         let inside65 = 65;
+//         console.log("Inside > 65 Block" ,score, inside80, inside65);
+//     }
+//   } 
+   
+//   console.log("Inside Globel Vlock", score,);
+
+  // inside80 accesibel in 1st if loop block and inside65 is only accesibel in 2nd if block
+  // non of them arn't accesibel in out side of block
+  // ** when you crate a variabel using "var" (ex: var inside80 = 50), it does not follow this scope law in the code
+
+  // ** End of Scope globel
+
+  // ** Star of Ternary Operators ** //
+
+    //  const user = true;
+
+    //  if(true){
+    //     console.log("Ture value");
+    //  }else{
+    //     console.log("False value");
+    //  }
+
+    // const user = true;
+   
+    // user ? console.log ("true value") : console.log("false value");
+  // value     ture statement            false satatemnt
+
+//   const username = "shubham";
+
+//   username.length >= 5 ? (console.log("above 5")) : (console.log("below 5"));
     
+//  const username = "shubham";
+//  const result = username.length >= 5 ? username.length : 0;
+//                 // * condition //
+//  console.log(result);
+
+// ** End of Ternary Operators ** //
+
+  // ** End of All Control Flows **  ///
