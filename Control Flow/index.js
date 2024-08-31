@@ -64,7 +64,7 @@
 // *** Start of While Loop
 
 
-let students = ["subham", "alex", "mark" , "deepak"];
+// let students = ["subham", "alex", "mark" , "deepak"];
 
 // Syntax of While loop
 
@@ -85,13 +85,33 @@ let students = ["subham", "alex", "mark" , "deepak"];
 //  print array elements
 
 
-let i = 0;
-while(i < students.length){
-    console.log(students[i]);
-    i++;
-}
+// let i = 0;
+// while(i < students.length){
+//     console.log(students[i]);
+//     i++;
+// }
 
 // *** end of while loop
 
 // ** Start of do while loop
 
+//  let count = 5;
+
+//  while(count < 5){
+//     console.log("Hello!");
+//     count++;
+//  }
+
+// how to run above while loop in do while
+
+let count = 0;
+do{
+ console.log(count);
+ count++;
+}while(count < 5);
+
+// Do while loop run it first time surely without checking condition
+  
+ console.log("Out of loop");
+ 
+ // ** End of do while loop
