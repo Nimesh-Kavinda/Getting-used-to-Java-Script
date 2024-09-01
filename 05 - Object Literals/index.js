@@ -59,26 +59,54 @@
 
 //** This Keyword */
 
-let user = {
-    name : "Nimesh Kavinda",
-    email : "nimeshkavinda@gmail.com",
-    age : 24,
-    isLoggedIn : false,
-    login : function(){
-        this.isLoggedIn = true;
-        return `Logged in - ${this.isLoggedIn}`;
-    },
-    logout : function(){
-        this.isLoggedIn = false;
-        return `Logged out - ${this.isLoggedIn}`;
-    },
-};
+// let user = {
+//     name : "Nimesh Kavinda",
+//     email : "nimeshkavinda@gmail.com",
+//     age : 24,
+//     isLoggedIn : false,
+//     login : function(){
+//         this.isLoggedIn = true;
+//         return `Logged in - ${this.isLoggedIn}`;
+//     },
+//     logout : function(){
+//         this.isLoggedIn = false;
+//         return `Logged out - ${this.isLoggedIn}`;
+//     },
+// };
  
 
-console.log(user.login());
-console.log(user.logout());
+// console.log(user.login());
+// console.log(user.logout());
 
-console.log(this); // this in global scope access window
+// console.log(this); // this in global scope access window
 
 
+ //** Objects in Arrays */
+   
 
+let user = {
+   name : "Nimesh Kavinda",
+   email : "nimeshkavinda@gmail.com",
+   age : 24,
+   isLoggedIn : false,
+   blogs : [{title : "Blog 1", numComment : 5, wordCount : 570},
+            {title : "Blog 2" , numComment : 7 , wordCount : 1257}
+   ],
+
+   allBlogConsole: function(){
+           this.blogs.forEach((blog) => {console.log(blog.title)});
+   },
+
+   login : function(){
+       this.isLoggedIn = true;
+       return `Logged in - ${this.isLoggedIn}`;
+   },
+   logout : function(){
+       this.isLoggedIn = false;
+       return `Logged out - ${this.isLoggedIn}`;
+   },
+};
+
+
+// console.log(user.blogs[1].title);
+user.allBlogConsole();

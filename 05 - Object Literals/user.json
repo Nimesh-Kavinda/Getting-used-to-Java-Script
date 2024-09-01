@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Shubham Sardha",
+        "age" : 25,
+        "email" : "shubham@gamil.com"
+    },
+    {
+        "name": "Alex Pace",
+        "age" : 25,
+        "email" : "alexpace@gamil.com"
+    },
+    {
+        "name": "Deepak K",
+        "age" : 24,
+        "email" : "deepak@gamil.com"
+    },
+    {
+        "name": "Jone M",
+        "age" : 25,
+        "email" : "jone@gamil.com"
+    }
+]
