@@ -37,7 +37,27 @@
  
 //** Methods */
 
-let random = "RANDOM";
+// let random = "RANDOM";
+
+// let user = {
+//     name : "Nimesh Kavinda",
+//     email : "nimeshkavinda@gmail.com",
+//     age : 24,
+//     isLoggedIn : false,
+//     login : function(){
+//         console.log("Login");
+//     },
+//     logout : function(){
+//         return "LogOut";
+//     },
+// };
+
+
+//     user.login();  // call a method
+//     console.log(random.toLowerCase());
+//     console.log(user.logout());
+
+//** This Keyword */
 
 let user = {
     name : "Nimesh Kavinda",
@@ -45,16 +65,20 @@ let user = {
     age : 24,
     isLoggedIn : false,
     login : function(){
-        console.log("Login");
+        this.isLoggedIn = true;
+        return `Logged in - ${this.isLoggedIn}`;
     },
     logout : function(){
-        return "LogOut";
+        this.isLoggedIn = false;
+        return `Logged out - ${this.isLoggedIn}`;
     },
 };
+ 
 
+console.log(user.login());
+console.log(user.logout());
 
-    user.login();  // call a method
-    console.log(random.toLowerCase());
-    console.log(user.logout());
+console.log(this); // this in global scope access window
+
 
 
