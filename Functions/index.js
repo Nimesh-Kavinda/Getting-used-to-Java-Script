@@ -90,3 +90,53 @@
 // console.log(value);
 
 //**End Return Keyword */
+
+//**Arrow Function */
+
+// let welocme = function(){
+//         console.log("Welcome");
+// };
+// welocme();
+
+//   // first exmaple for arrow function
+// let intro = () => {
+//     console.log("welcome Arrow")
+// };
+// intro();
+
+// pass parameters
+
+// let welcome = (name) => {
+//     console.log("welcome" , name);
+// };
+// welcome("Nimesh");
+
+// let welcome2 = (name) => {
+//     console.log(`welcome ${name}`);
+// };
+// welcome2("Nimesh");
+
+// let add = (numOne, numTow) => {
+//     return numOne + numTow;
+// };
+// console.log(add(2,5));
+
+// we can say this like
+
+// syntax with tow parameters
+let add = (numOne, numTow) => numOne + numTow;
+
+console.log(add(2,5));
+
+// sytax with one parameters - we can write (name) like name
+let welcome = name =>  `Welcome ${name}`;
+
+console.log(welcome("Nimesh"));
+
+// syntax with 0 parameters
+
+let intro = () => `Welocme`;
+
+console.log(intro());
+
+//**End of Arrow Functions */
