@@ -1,0 +1,60 @@
+// let users = ["Nimesh", "Dimuth", "Kavinda", "Adithya"];
+
+// arrays are good but we can only store only one type of data
+
+   //**05- object literals */
+
+   //** Basics of objects */
+
+//  let user = {
+//     name : "Nimesh Kavinda",
+//     email : "nimeshkavinda@gmail.com",
+//     age : 25,
+//     isLoggedIn : false,
+//  };  
+ 
+//  // show the obejct
+//  console.log(user);
+
+//  // prib=nt object propeties
+//  console.log(user.name);
+
+//  // value changing == overwrite
+//  console.log(user.isLoggedIn);
+//  user.isLoggedIn = true;
+//  console.log(user.isLoggedIn);
+
+//  // another way to print propeties
+//  console.log(user["email"]);
+
+
+//  let key = "name";
+//  console.log(user[key]);
+
+//  // find the type
+
+//  console.log(typeof user);
+ 
+//** Methods */
+
+let random = "RANDOM";
+
+let user = {
+    name : "Nimesh Kavinda",
+    email : "nimeshkavinda@gmail.com",
+    age : 24,
+    isLoggedIn : false,
+    login : function(){
+        console.log("Login");
+    },
+    logout : function(){
+        return "LogOut";
+    },
+};
+
+
+    user.login();  // call a method
+    console.log(random.toLowerCase());
+    console.log(user.logout());
+
+
