@@ -124,19 +124,109 @@
 // we can say this like
 
 // syntax with tow parameters
-let add = (numOne, numTow) => numOne + numTow;
+// let add = (numOne, numTow) => numOne + numTow;
 
-console.log(add(2,5));
+// console.log(add(2,5));
 
-// sytax with one parameters - we can write (name) like name
-let welcome = name =>  `Welcome ${name}`;
+// // sytax with one parameters - we can write (name) like name
+// let welcome = name =>  `Welcome ${name}`;
 
-console.log(welcome("Nimesh"));
+// console.log(welcome("Nimesh"));
 
-// syntax with 0 parameters
+// // syntax with 0 parameters
 
-let intro = () => `Welocme`;
+// let intro = () => `Welocme`;
 
-console.log(intro());
+// console.log(intro());
 
 //**End of Arrow Functions */
+
+//** Function methods */
+
+// let welcome = () => "Welcome";
+// console.log(welcome());
+
+// let myName = "Nimesh";
+// console.log(myName.toLocaleLowerCase());
+
+// let students = ["Alex", "Nimesh"];
+// console.log(students.push("Kavinda")); // give the new number of indexes of array
+
+
+
+  //**End of function methods */
+
+
+  //** Start of For each Method */
+
+        // ** call back function examples**//
+
+// let add = function(a,b){
+//     return a + b;
+// }
+
+// let mul = function(a,b){
+//     return a * b;
+// }
+
+// function calculator(numOne, numTow, add, mul){
+//      let addResult = add(numOne , numTow);
+//      let mulResult = mul(numOne , numTow);
+//      let result = `Add : ${addResult} Mul: ${mulResult}`;
+//     //  console.log(result); 
+//     return result;
+// }
+// // calculator(5, 10, add, mul);
+// console.log(calculator(5, 10, add, mul));
+
+
+// short form of above
+
+// let add = function(a,b){
+//     return a + b;
+// }
+
+// let mul = function(a,b){
+//     return a * b;
+// }
+
+// function calculator(numOne, numTow, add, mul){
+   
+//     return  `Add : ${add(numOne, numTow)} Mul: ${mul(numOne, numTow)}`;
+   
+// }
+// // calculator(5, 10, add, mul);
+// console.log(calculator(5, 10, add, mul));
+
+       //*** For each methid */
+
+//**First way */
+
+// let products = ["bread", "butter", "Jam", "bottle"];
+
+// let callBack = (product) => console.log(`My product name is ${product}`);
+
+//   products.forEach(callBack);
+
+// ** second way to print array elemnts **//
+ 
+// let products = ["bread", "butter", "Jam", "bottle"];
+
+// products.forEach( product => console.log(product) );
+
+//** Print the length of elements */
+
+// let products = ["bread", "butter", "Jam", "bottle"];
+
+// products.forEach( product => console.log(product.length) );
+
+// Example
+
+let students = ["Nimesh", "Dimuth", "Jone", "Tharuka" ];
+students.forEach((student , index) => {
+    console.log(student, index)
+});
+
+      //** End of For Each Method */
+
+      //** End of Functions */
