@@ -60,11 +60,33 @@
 //  }
 //  addition(5,10);
                                       //defulte value
-function fullName(firstName ="ABC", lastName ="XYZ"){
-    console.log(`Welcome ${firstName} ${lastName}`);
-}
+// function fullName(firstName ="ABC", lastName ="XYZ"){
+//     console.log(`Welcome ${firstName} ${lastName}`);
+// }
 
-fullName("Nimesh", "Kavinda");
-fullName();
+// fullName("Nimesh", "Kavinda");
+// fullName();
 
 //** End of Arguement Parameters */
+
+
+//** Start  Return Keyword */
+
+// function addition(numOne, numTow){
+//         let result = numOne + numTow;
+//         return result;
+//      }
+//     //  console.log(addition(5,10));
+//     const value = addition(5,10);
+//     console.log(value);
+
+// function fullName(firstName, lastName){
+//     // let result = firstName + " " + lastName;
+//     // return result;
+//     return firstName + " " + lastName;
+// }
+
+// let value = fullName("Nimesh", "Kavinda");
+// console.log(value);
+
+//**End Return Keyword */
