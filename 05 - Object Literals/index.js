@@ -113,21 +113,63 @@
 
 //** Math Object */
 
-const num = 15.3;
+// const num = 15.3;
 
- console.log(Math);
- console.log(Math.PI);
+//  console.log(Math);
+//  console.log(Math.PI);
 
- console.log(Math.E);
+//  console.log(Math.E);
 
- console.log(Math.round(num));
- console.log(Math.ceil(num));
- console.log(Math.floor(num));
+//  console.log(Math.round(num));
+//  console.log(Math.ceil(num));
+//  console.log(Math.floor(num));
 
- console.log(Math.pow(2,5));
- console.log(Math.sign(num)); // negative or postive or netural
+//  console.log(Math.pow(2,5));
+//  console.log(Math.sign(num)); // negative or postive or netural
  
- let random = Math.random(); // super importand for developing
- console.log(random * 10);
- console.log(Math.round(random * 10));
+//  let random = Math.random(); // super importand for developing
+//  console.log(random * 10);
+//  console.log(Math.round(random * 10));
  
+//** Primitive vs Reference types */
+
+// let numOne =  15;
+// let numTow =  numOne;
+// numOne = 30;
+
+// console.log(numOne);
+// console.log(numTow);
+
+// let objOne = {title: "Learning JavaScript", rank:2};
+// let objTow = objOne;
+// let objThree = objTow;
+
+// objOne.rank = 1;
+
+// console.log(objOne);
+// console.log(objTow);
+
+// objTow.rank = 5;
+// console.log(objOne);
+// console.log(objTow);
+// console.log(objThree);
+
+///** part 2 P vs R */
+
+let objOne = {title: "Learning JavaScript", rank:2};
+let objTwo = {...objOne, publish: "22-445-444-4", rank:50};
+
+objOne.rank = 1;
+
+console.log(objOne);
+console.log(objTwo);
+
+let arrOne = ["Shubham", "alex"];
+let arrTwo = [...arrOne, "Jone" , "deepak"];
+arrOne.push ("deepak");
+
+
+console.log(arrOne);
+console.log(arrTwo);
+ 
+   ///** END of Object Literals */
