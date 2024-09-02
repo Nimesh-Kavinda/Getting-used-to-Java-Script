@@ -1,3 +1,16 @@
 .highlight{
     background-color: blue;
 }
+.blog-heading{
+    font-style: italic;
+}
+
+.inactive{
+    border: 2px solid red;
+}
+.active{
+    border: 2px solid blue;
+}
+.important{
+    border: 2px solid green;
+}

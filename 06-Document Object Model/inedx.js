@@ -48,7 +48,39 @@
 
 // });
 
-//  from this we can only overwriting styles
-const brandName = document.querySelector("#website-name");
-brandName.setAttribute("style","color:blue;");
+//**Changing Css Styling */
 
+//  from this we can only overwriting styles
+// const brandName = document.querySelector("#website-name");
+// brandName.setAttribute("style","color:blue;");
+
+// const brandName = document.querySelector("#website-name");
+// brandName.style.color = "blue";
+
+//**Add and Remove Classes */
+
+// let heading = document.querySelector("h1");
+// heading.classList.add("highlight");  // add class
+// heading.classList.remove("blog-heading"); // remove class
+
+
+// change classes
+
+//  const activeClasses = document.querySelectorAll("li.active");
+//  const inActiveClasses = document.querySelectorAll("li.inactive");
+
+//  activeClasses.forEach(active =>{
+//     active.classList.remove("active");
+//     active.classList.add("inactive");
+//  });
+
+
+// inActiveClasses.forEach(active => {
+//     active.classList.remove("inactive");
+//     active.classList.add("active");
+//  });
+
+// toggel     - if you haven't a class toggel is going to add class but if you have a class from toggel keyword it is going to remove it
+                // remove when the class name is similar to toggel class
+const brandName = document.querySelector("#website-name");
+brandName.classList.toggle("important");
