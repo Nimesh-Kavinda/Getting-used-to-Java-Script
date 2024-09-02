@@ -84,29 +84,50 @@
  //** Objects in Arrays */
    
 
-let user = {
-   name : "Nimesh Kavinda",
-   email : "nimeshkavinda@gmail.com",
-   age : 24,
-   isLoggedIn : false,
-   blogs : [{title : "Blog 1", numComment : 5, wordCount : 570},
-            {title : "Blog 2" , numComment : 7 , wordCount : 1257}
-   ],
+// let user = {
+//    name : "Nimesh Kavinda",
+//    email : "nimeshkavinda@gmail.com",
+//    age : 24,
+//    isLoggedIn : false,
+//    blogs : [{title : "Blog 1", numComment : 5, wordCount : 570},
+//             {title : "Blog 2" , numComment : 7 , wordCount : 1257}
+//    ],
 
-   allBlogConsole: function(){
-           this.blogs.forEach((blog) => {console.log(blog.title)});
-   },
+//    allBlogConsole: function(){
+//            this.blogs.forEach((blog) => {console.log(blog.title)});
+//    },
 
-   login : function(){
-       this.isLoggedIn = true;
-       return `Logged in - ${this.isLoggedIn}`;
-   },
-   logout : function(){
-       this.isLoggedIn = false;
-       return `Logged out - ${this.isLoggedIn}`;
-   },
-};
+//    login : function(){
+//        this.isLoggedIn = true;
+//        return `Logged in - ${this.isLoggedIn}`;
+//    },
+//    logout : function(){
+//        this.isLoggedIn = false;
+//        return `Logged out - ${this.isLoggedIn}`;
+//    },
+// };
 
 
-// console.log(user.blogs[1].title);
-user.allBlogConsole();
+// // console.log(user.blogs[1].title);
+// user.allBlogConsole();
+
+//** Math Object */
+
+const num = 15.3;
+
+ console.log(Math);
+ console.log(Math.PI);
+
+ console.log(Math.E);
+
+ console.log(Math.round(num));
+ console.log(Math.ceil(num));
+ console.log(Math.floor(num));
+
+ console.log(Math.pow(2,5));
+ console.log(Math.sign(num)); // negative or postive or netural
+ 
+ let random = Math.random(); // super importand for developing
+ console.log(random * 10);
+ console.log(Math.round(random * 10));
+ 
