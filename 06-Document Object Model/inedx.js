@@ -82,5 +82,53 @@
 
 // toggel     - if you haven't a class toggel is going to add class but if you have a class from toggel keyword it is going to remove it
                 // remove when the class name is similar to toggel class
-const brandName = document.querySelector("#website-name");
-brandName.classList.toggle("important");
+// const brandName = document.querySelector("#website-name");
+// brandName.classList.toggle("important");
+
+//** Relationships - Parents , Child and Sibilins */
+
+
+        //**chidren */
+// const topNav = document.querySelector(".top-nav");
+// // console.log(topNav.children);  //  acces in chidrens
+
+// const topNavChildren = Array.from(topNav.children);
+
+
+// topNavChildren.forEach(child => {
+//     child.classList.add("random");
+//     console.log(child);
+// });
+
+        //**parents */
+
+        // const brandName = document.querySelector("#website-name");
+        // console.log(brandName.parentElement.children);
+
+        // const array = Array.from(brandName.parentElement.children);
+      
+         //* siblins
+
+        //  const blogHeading = document.querySelector(".sub-heading");
+        //  console.log(blogHeading.nextElementSibling);
+        //  console.log(blogHeading.previousElementSibling);
+
+//** Events */
+  
+// bsed on ui
+
+// const productAdd = document.querySelector("button");
+// productAdd.addEventListener("click", () =>{
+//     console.log("button click");
+// //    productAdd.setAttribute("style", "display:none");
+// });
+
+const products = document.querySelectorAll("li");
+products.forEach((product) => {
+   product.addEventListener("click", (event) => {
+    event.target.style.textDecoration = "line-through";
+    
+    console.log(event.target.style.textDecoration);
+
+   })
+})
