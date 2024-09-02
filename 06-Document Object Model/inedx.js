@@ -123,12 +123,45 @@
 // //    productAdd.setAttribute("style", "display:none");
 // });
 
+// const products = document.querySelectorAll("li");
+// products.forEach((product) => {
+//    product.addEventListener("click", (event) => {
+//     event.target.style.textDecoration = "line-through";
+    
+//     console.log(event.target.style.textDecoration);
+
+//    })
+// })
+
+//** Creating and Removing elements */
+
+// remove
+
 const products = document.querySelectorAll("li");
 products.forEach((product) => {
    product.addEventListener("click", (event) => {
-    event.target.style.textDecoration = "line-through";
-    
-    console.log(event.target.style.textDecoration);
+    event.target.remove();
+    console.log(event.target.textContent);
+})});
 
-   })
-})
+
+  // add 
+
+// const addProducts = document.querySelector("ul");
+// const button = document.querySelector("button");
+// button.addEventListener("click", () => {
+//     addProducts.innerHTML += "<li>New product</li>";
+//     console.log(addProducts.innerHTML);
+// });
+
+
+const addProducts = document.querySelector("ul");
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+    const newli = document.createElement("li");
+    newli.innerText = "New Product";
+   addProducts.prepend(newli);
+    console.log(addProducts.innerHTML);
+});
+
+
