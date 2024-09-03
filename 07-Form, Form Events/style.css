@@ -48,3 +48,29 @@ input[type = "submit"]{
     border-radius: 4px;
     height: 40px;
 }
+
+.success{
+      width: 300px;
+      height: 40px;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #18cc54;
+      color: aliceblue;
+      border: 1px solid gray;
+      padding-top: 20px;
+      margin-top: 40px;
+}
+
+.error{
+    width: 300px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #a2211f;
+    color: aliceblue;
+    border: 1px solid gray;
+    padding-top: 20px;
+    margin-top: 40px;
+}

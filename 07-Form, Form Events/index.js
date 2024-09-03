@@ -18,24 +18,50 @@
 //**Testing Regular Expression */
 
 
+// const form = document.querySelector(".form");
+// const usernamePattern = /^[a-z]{6,10}$/;
+// const feedbackPattern = /^.{20,50}$/;
+
+
+
+// form.addEventListener("submit", (event) => {
+//    event.preventDefault(); 
+//    const userResult = usernamePattern.test(form.username.value);
+//    const feedbackResult = feedbackPattern.test(form.feedback.value);
+
+// //    console.log(userResult, feedbackResult);
+    
+//             if(userResult && feedbackResult){
+//                 console.log("worked!");
+//             }else{
+//                 console.log("not worked!");
+//             }
+    
+// });
+
+//** Basic form Validation */
+
 const form = document.querySelector(".form");
+const p = document.querySelector("p");
+
 const usernamePattern = /^[a-z]{6,10}$/;
 const feedbackPattern = /^.{20,50}$/;
 
 
 
 form.addEventListener("submit", (event) => {
-   event.preventDefault(); 
+   event.preventDefault();  
    const userResult = usernamePattern.test(form.username.value);
    const feedbackResult = feedbackPattern.test(form.feedback.value);
 
 //    console.log(userResult, feedbackResult);
     
             if(userResult && feedbackResult){
-                console.log("worked!");
+                p.setAttribute("class", "success"); // adding css class
+                p.textContent = "FeedBack Submitted, Thank You!" // adding text elemnt to p tag
             }else{
-                console.log("not worked!");
+                p.setAttribute("class", "error");
+                p.textContent ="Please Check Username and Feedback Again";
             }
     
 });
-
