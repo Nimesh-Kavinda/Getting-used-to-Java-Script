@@ -41,6 +41,34 @@
 
 //** Basic form Validation */
 
+// const form = document.querySelector(".form");
+// const p = document.querySelector("p");
+
+// const usernamePattern = /^[a-z]{6,10}$/;
+// const feedbackPattern = /^.{20,50}$/;
+
+
+
+// form.addEventListener("submit", (event) => {
+//    event.preventDefault();  
+//    const userResult = usernamePattern.test(form.username.value);
+//    const feedbackResult = feedbackPattern.test(form.feedback.value);
+
+// //    console.log(userResult, feedbackResult);
+    
+//             if(userResult && feedbackResult){
+//                 p.setAttribute("class", "success"); // adding css class
+//                 p.textContent = "FeedBack Submitted, Thank You!" // adding text elemnt to p tag
+//             }else{
+//                 p.setAttribute("class", "error");
+//                 p.textContent ="Please Check Username and Feedback Again";
+//             }
+    
+// });
+
+//**Key Bord Events */
+
+
 const form = document.querySelector(".form");
 const p = document.querySelector("p");
 
@@ -64,4 +92,12 @@ form.addEventListener("submit", (event) => {
                 p.textContent ="Please Check Username and Feedback Again";
             }
     
+});
+
+form.username.addEventListener("keyup", event => {
+   if(username){
+          form.username["click" ];
+   }else{
+
+   }
 });

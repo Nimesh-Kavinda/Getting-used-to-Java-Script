@@ -74,3 +74,11 @@ input[type = "submit"]{
     padding-top: 20px;
     margin-top: 40px;
 }
+
+.accepted{
+border: 20px solid greenyellow;
+}
+
+.rejecterd{
+    border: 20px solid rgb(113, 65, 50);
+}
