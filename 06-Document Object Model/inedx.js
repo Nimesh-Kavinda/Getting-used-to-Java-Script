@@ -137,12 +137,12 @@
 
 // remove
 
-const products = document.querySelectorAll("li");
-products.forEach((product) => {
-   product.addEventListener("click", (event) => {
-    event.target.remove();
-    console.log(event.target.textContent);
-})});
+// const products = document.querySelectorAll("li");
+// products.forEach((product) => {
+//    product.addEventListener("click", (event) => {
+//     event.target.remove();
+//     console.log(event.target.textContent);
+// })});
 
 
   // add 
@@ -155,13 +155,71 @@ products.forEach((product) => {
 // });
 
 
-const addProducts = document.querySelector("ul");
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-    const newli = document.createElement("li");
-    newli.innerText = "New Product";
-   addProducts.prepend(newli);
-    console.log(addProducts.innerHTML);
-});
+// const addProducts = document.querySelector("ul");
+// const button = document.querySelector("button");
+// button.addEventListener("click", () => {
+//     const newli = document.createElement("li");
+//     newli.innerText = "New Product";
+//    addProducts.prepend(newli);
+//     console.log(addProducts.innerHTML);
+// });
+
+//* Event Bubbling/
+
+// const addProducts = document.querySelector("ul");
+// const button = document.querySelector("button");
+
+// button.addEventListener("click", () => {
+//         const li = document.createElement("li");
+//         li.textContent = "New Product";
+//         addProducts.append(li);
+// });
+
+// addProducts.addEventListener("click", (event) => {
+//         if(event.target.tagName === "LI"){
+//                 event.target.remove();
+//         }
+// });
 
 
+// const newLi= document.querySelector(".active");
+// newLi.addEventListener("click", () => {
+        
+// });
+
+//**More events */
+
+// copy and Alert
+const products = document.querySelector("ul");
+
+
+// products.addEventListener('copy',(event) => {
+//    if(event.target.tagName == "LI"){
+//         alert(event.target.textContent);
+//    }
+
+// });
+
+// add the function to a variael amd use in EventLister
+// const copyAlert = (event) => {
+//         if(event.target.tagName == "LI"){
+//             alert(event.target.textContent);
+//         }
+//      }
+
+// products.addEventListener('copy',copyAlert);
+
+
+// add the mouse movement to body
+
+// const webPage = document.querySelector("body");
+// webPage.addEventListener("mousemove", (event) =>{
+//    console.log(event.clientX, event.clientY);
+// } );
+
+//scrole event
+
+// const webPage = document.querySelector("body");
+// webPage.addEventListener("wheel", (event) => {
+//     console.log(event.pageX, event.pageY);
+// });
