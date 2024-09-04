@@ -99,23 +99,36 @@
 // console.log(reduceNumbers);
 
 
-const students =[
-    {name: "Nimesh", marks:9},
-    {name: "Dimuth", marks:7},
-    {name: "Adithya", marks:6},
-    {name: "Nimesh", marks:7},
-    {name: "Tharuka", marks:9},
-    {name: "Praveen", marks:10},
-    {name: "Nimesh", marks:10},
-    {name: "Bhanuka", marks:8},
-    {name: "Lasal", marks:9},
-];
+// const students =[
+//     {name: "Nimesh", marks:9},
+//     {name: "Dimuth", marks:7},
+//     {name: "Adithya", marks:6},
+//     {name: "Nimesh", marks:7},
+//     {name: "Tharuka", marks:9},
+//     {name: "Praveen", marks:10},
+//     {name: "Nimesh", marks:10},
+//     {name: "Bhanuka", marks:8},
+//     {name: "Lasal", marks:9},
+// ];
 
-const reduceStudents = students.reduce((total, current) => {
-        if(current.name === "Nimesh"){
-            total = total + current.marks;
-        }
-        return total;
-} , 0);
+// const reduceStudents = students.reduce((total, current) => {
+//         if(current.name === "Nimesh"){
+//             total = total + current.marks;
+//         }
+//         return total;
+// } , 0);
 
-console.log(reduceStudents);
+// console.log(reduceStudents);
+
+//** Find Methods */
+
+// const numbers = [5, 20, 75, 80, 15, 30];
+
+// const findNumbers = numbers.find((num) => {
+//     return num > 50;
+// });
+// console.log(findNumbers);
+
+// In find method we can Find the First Elemnt that Satisfy our Condtion
+
+
