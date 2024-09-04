@@ -76,9 +76,13 @@ input[type = "submit"]{
 }
 
 .accepted{
-border: 20px solid greenyellow;
+border: 2px solid rgb(18, 203, 46);
 }
 
 .rejecterd{
-    border: 20px solid rgb(113, 65, 50);
+    border: 2px solid rgb(193, 39, 21);
+}
+
+input:focus, textarea:focus{
+    outline: none;
 }

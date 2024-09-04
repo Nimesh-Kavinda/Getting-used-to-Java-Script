@@ -95,9 +95,19 @@ form.addEventListener("submit", (event) => {
 });
 
 form.username.addEventListener("keyup", event => {
-   if(username){
-          form.username["click" ];
-   }else{
+  const userResult = usernamePattern.test(event.target.value);
+     if(userResult){
+      form.username.setAttribute("class" , "accepted");
+     }else{
+      form.username.setAttribute("class", "rejecterd");
+     }
+});
 
-   }
+form.feedback.addEventListener("keyup", event => {
+  const feedbackResult = feedbackPattern.test(event.target.value);
+     if(feedbackResult){
+      form.feedback.setAttribute("class" , "accepted");
+     }else{
+      form.feedback.setAttribute("class", "rejecterd");
+     }
 });
