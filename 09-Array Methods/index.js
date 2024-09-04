@@ -153,14 +153,50 @@
 
 
 
-const movies = [
-    {name: "Bug Finder" , ratings: 10},
-    {name: "Lost Corder" , ratings: 7},
-    {name: "Dev AT Night" , ratings: 9},
-    {name: "Speed or Quailtyr" , ratings: 8}
-];
+// const movies = [
+//     {name: "Bug Finder" , ratings: 10},
+//     {name: "Lost Corder" , ratings: 7},
+//     {name: "Dev AT Night" , ratings: 9},
+//     {name: "Speed or Quailtyr" , ratings: 8}
+// ];
 
-movies.sort((a,b) => {
-    return a.ratings - b.ratings;
-});
-console.log(movies);
+// movies.sort((a,b) => {
+//     return a.ratings - b.ratings;
+// });
+// console.log(movies);
+
+//**Revers Method */
+
+// const number = [5, 10, 2, 7, 9, 3, 1];
+// number.reverse();
+// console.log(number);
+
+// const movies = [
+//     {name: "Bug Finder" , ratings: 10},
+//     {name: "Lost Corder" , ratings: 7},
+//     {name: "Dev AT Night" , ratings: 9},
+//     {name: "Speed or Quailtyr" , ratings: 8}
+// ];
+// movies.reverse();
+// console.log(movies)
+
+//** Chaning Methods */
+
+// const numbers = [70, 50, 90, 80, 25, 35];
+
+// const filterNumbers = numbers.filter(num => num > 75);
+
+// const mapNumbers = filterNumbers.map(num => num + 5);
+
+// console.log(mapNumbers);
+
+//  we can chanin above code like that
+
+const numbers = [70, 50, 90, 80, 25, 35];
+
+const filterNumbers = numbers
+                    .reverse()
+                    .filter(num => num > 75)
+                    .map(num => num + 5);
+
+console.log(filterNumbers);
