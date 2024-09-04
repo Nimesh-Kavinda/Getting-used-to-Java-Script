@@ -21,15 +21,53 @@
 // console.log(odd);
 
 
-const movies = [
-    {name:"Coffe Day", rating:9},
-    {name:"The Lost Coede", rating:7},
-    {name:"Typical Bug", rating:4}
+// const movies = [
+//     {name:"Coffe Day", rating:9},
+//     {name:"The Lost Coede", rating:7},
+//     {name:"Typical Bug", rating:4}
+// ];
+
+// const filterMovies = movies.filter((movie) => {
+//     return movie.rating > 6;
+
+// });
+
+// console.log(filterMovies);
+
+///** Map Method */
+
+const numbers = [10, 20, 30, 40, 50];
+
+
+// add Five to all elements
+// const mapNumbers = numbers.map((number) => {
+//     return number + 5;
+// });
+// console.log(mapNumbers);
+
+// add five to num,bers the grater than 30
+// const mapNumbers = numbers.map((num) => {
+//     if(num > 30){
+//         return num + 5;
+//     }else{
+//         return num;
+//     }
+// });
+
+// console.log(mapNumbers);
+
+const products = [
+    {name: "Bread", price: 25, tax: 0.05},
+    {name: "Butter", price: 65, tax: 0.05},
+    {name: "Water", price: 15, tax: 0},
+    {name: "Material", price: 185, tax: 0.18},
+
 ];
 
-const filterMovies = movies.filter((movie) => {
-    return movie.rating > 6;
+const mapProducts = products.map((product) => {
+    const newPrice = product.price + product.price*product.tax;
+   return {name: product.name, price:newPrice , tax:product.tax};
 
-});
+} );
 
-console.log(filterMovies);
+console.log(mapProducts);
