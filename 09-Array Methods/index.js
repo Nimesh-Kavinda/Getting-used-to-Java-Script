@@ -131,4 +131,36 @@
 
 // In find method we can Find the First Elemnt that Satisfy our Condtion
 
+//** Sort Method */
 
+
+// const numbers = [5, 10, 2, 7, 9, 3, 1];
+
+// numbers.sort();
+
+// console.log(numbers);    ///**this depend on first char */
+
+// const names = ["shubham", "jone", "deepak", "alex"];
+// names.sort();
+// console.log(names);
+
+// const numbers = [5, 10, 7, 2, 9, 30];
+
+// numbers.sort((a, b) => {
+//   return a-b;
+// });
+// console.log(numbers);        //** a-b give us lower to higer and b-a high to low */
+
+
+
+const movies = [
+    {name: "Bug Finder" , ratings: 10},
+    {name: "Lost Corder" , ratings: 7},
+    {name: "Dev AT Night" , ratings: 9},
+    {name: "Speed or Quailtyr" , ratings: 8}
+];
+
+movies.sort((a,b) => {
+    return a.ratings - b.ratings;
+});
+console.log(movies);
