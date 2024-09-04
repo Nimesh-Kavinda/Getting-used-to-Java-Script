@@ -36,7 +36,7 @@
 
 ///** Map Method */
 
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 
 
 // add Five to all elements
@@ -56,18 +56,66 @@ const numbers = [10, 20, 30, 40, 50];
 
 // console.log(mapNumbers);
 
-const products = [
-    {name: "Bread", price: 25, tax: 0.05},
-    {name: "Butter", price: 65, tax: 0.05},
-    {name: "Water", price: 15, tax: 0},
-    {name: "Material", price: 185, tax: 0.18},
+// const products = [
+//     {name: "Bread", price: 25, tax: 0.05},
+//     {name: "Butter", price: 65, tax: 0.05},
+//     {name: "Water", price: 15, tax: 0},
+//     {name: "Material", price: 185, tax: 0.18},
 
+// ];
+
+// const mapProducts = products.map((product) => {
+//     const newPrice = product.price + product.price*product.tax;
+//    return {name: product.name, price:newPrice , tax:product.tax};
+
+// } );
+
+// console.log(mapProducts);
+
+
+//*** Reduce Method */
+
+// addition of arrya elemnts
+
+// const numbers = [10, 20, 30, 40, 50];
+// const reducenumbers = numbers.reduce((total, current) => {
+//     total = total + current ;
+//     return total;
+
+// }, 0);
+
+// console.log(reducenumbers);
+
+
+// multiple of the array elements
+
+// const numbers = [7, 2, 4, 5, 9];
+
+// const reduceNumbers = numbers.reduce((total, current) => {
+//     total = total * current;
+//     return total;
+// } , 1);
+
+// console.log(reduceNumbers);
+
+
+const students =[
+    {name: "Nimesh", marks:9},
+    {name: "Dimuth", marks:7},
+    {name: "Adithya", marks:6},
+    {name: "Nimesh", marks:7},
+    {name: "Tharuka", marks:9},
+    {name: "Praveen", marks:10},
+    {name: "Nimesh", marks:10},
+    {name: "Bhanuka", marks:8},
+    {name: "Lasal", marks:9},
 ];
 
-const mapProducts = products.map((product) => {
-    const newPrice = product.price + product.price*product.tax;
-   return {name: product.name, price:newPrice , tax:product.tax};
+const reduceStudents = students.reduce((total, current) => {
+        if(current.name === "Nimesh"){
+            total = total + current.marks;
+        }
+        return total;
+} , 0);
 
-} );
-
-console.log(mapProducts);
+console.log(reduceStudents);
