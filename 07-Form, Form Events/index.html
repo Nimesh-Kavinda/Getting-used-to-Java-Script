@@ -17,12 +17,12 @@
               
          <h1>Customer Feedback</h1>
 
-         <form action="" class="form">
-        <input type="text" placeholder="Username" class="username" id="username">
-        <textarea id="feedback" placeholder="Feedback" class="feedback"></textarea>
+         <form onsubmit="displayData(event)" action="" class="form">
+        <input onkeyup="userNameValidation(event)" type="text" placeholder="Username" class="username" id="username">
+        <textarea onkeyup="feedbackValidation(event)" id="feedback" placeholder="Feedback" class="feedback"></textarea>
         <input type="submit" id="submit" value="Submit">
         </form>
-        <p class="par"></p>
+        <p onclick="changeText(event)">randaom</p>
      </div>
 
 
@@ -31,6 +31,6 @@
 
 
 
-  <script src="index.js"></script>  
+  <script src="script.js"></script>  
 </body>
 </html>
