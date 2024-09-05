@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-DO Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/search.png">
+</head>
+<body>
+    <main>
+        <div class="wrap">
+            <section class="heading">
+                <p class="title">WebExpert</p>
+                <p class="sub-title">Manage and Search Your Pending Tasks in Clicks!</p>
+            </section>
+
+            <section class="task-manager">
+                <div class="search-box">
+                    <from class="search">
+                        <input type="text" name="task" placeholder="Search Task" autocomplete="off">
+                        <i class="bi bi-x-circle reset"></i>
+                    </from>
+                </div>
+                <div class="task-box">
+                    <ul class="tasks">
+                        <li>
+                            <span>Task 1</span>
+                            <i class="bi bi-trash-fill delete"></i>
+                        </li>
+                        <li>
+                            <span>Task 2</span>
+                            <i class="bi bi-trash-fill delete"></i>
+                        </li>
+                        <li>
+                            <span>Task 3</span>
+                            <i class="bi bi-trash-fill delete"></i>
+                        </li>
+                    </ul>
+                    <form class="add">
+                        <input type="text" name = "task" placeholder="Add Tasks" autocomplete="off">
+                        <input type="submit" value="Add">
+                    </form>
+                </div>
+                <div class="message">
+                    <span>You have 3 pending tasks</span>
+                    <button class="clear">Clear All</button>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
