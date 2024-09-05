@@ -2,6 +2,7 @@
 
 const addForm =document.querySelector(".add");
 const tasks = document.querySelector(".tasks");
+const clearAll = document.querySelector(".clear");
 
 addForm.addEventListener("submit", event => {
     event.preventDefault();
@@ -17,4 +18,19 @@ addForm.addEventListener("submit", event => {
         addForm.reset();
     }
 
+});
+     //** Delete task */
+
+tasks.addEventListener("click", event => {
+    if(event.target.classList.contains("delete")){
+        event.target.parentElement.remove();
+    }
+});
+
+    //** Clear All Task */
+clearAll.addEventListener("click", event => {
+    const taskItems = tasks.querySelectorAll("LI");
+    taskItems.forEach(item => {
+        item.remove();
+    });
 });
