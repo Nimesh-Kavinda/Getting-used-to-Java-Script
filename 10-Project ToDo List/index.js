@@ -4,7 +4,7 @@ const addForm =document.querySelector(".add");
 const tasks = document.querySelector(".tasks");
 const clearAll = document.querySelector(".clear");
 const messageSpan = document.querySelector(".message span")
-
+const serachForm = document.querySelector(".search");
 
 //**Upatde task function */
 function updateMessage(){
@@ -45,5 +45,10 @@ clearAll.addEventListener("click", event => {
         item.remove();
     });
     updateMessage();
+});
+
+
+serachForm.addEventListener("keyup", (event) => {
+    console.log(serachForm.task.value);
 });
 
