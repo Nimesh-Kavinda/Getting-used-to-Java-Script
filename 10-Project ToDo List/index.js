@@ -3,8 +3,17 @@
 const addForm =document.querySelector(".add");
 const tasks = document.querySelector(".tasks");
 const clearAll = document.querySelector(".clear");
+const messageSpan = document.querySelector(".message span")
 
-addForm.addEventListener("submit", event => {
+
+//**Upatde task function */
+function updateMessage(){
+    const textLenght = tasks.children.length;
+    messageSpan.textContent = `You have ${textLenght} pending tasks`;
+}
+updateMessage();
+
+    addForm.addEventListener("submit", event => {
     event.preventDefault();
     const value = addForm.task.value.trim();
     
@@ -16,6 +25,7 @@ addForm.addEventListener("submit", event => {
                             </li>`;
 
         addForm.reset();
+        updateMessage();
     }
 
 });
@@ -24,6 +34,7 @@ addForm.addEventListener("submit", event => {
 tasks.addEventListener("click", event => {
     if(event.target.classList.contains("delete")){
         event.target.parentElement.remove();
+        updateMessage();
     }
 });
 
@@ -33,4 +44,6 @@ clearAll.addEventListener("click", event => {
     taskItems.forEach(item => {
         item.remove();
     });
+    updateMessage();
 });
+
