@@ -48,7 +48,35 @@ clearAll.addEventListener("click", event => {
 });
 
 
-serachForm.addEventListener("keyup", (event) => {
-    console.log(serachForm.task.value);
+function filterTask(term){
+    Array.from(tasks.children)
+    .filter(task => {
+         return !task.textContent.toLowerCase().includes(term);
+    })
+    .forEach(task => {
+        task.classList.add("hide")
+    });
+
+    Array.from(tasks.children)
+    .filter(task => {
+        return task.textContent.toLowerCase().includes(term);
+    })
+    .forEach(task =>{
+        task.classList.remove("hide");
+    })
+};
+
+serachForm.addEventListener("keyup",event => {
+   const term = serachForm.task.value.trim().toLowerCase();
+    filterTask(term);
 });
+
+serachForm.addEventListener("click", event => {
+    if(event.target.classList.contains("reset")){
+        serachForm.reset();
+        const term = serachForm.task.value.trim();
+        filterTask(term);
+
+    }
+})
 
