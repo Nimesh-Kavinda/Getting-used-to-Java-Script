@@ -18,7 +18,7 @@
                 </section>
 
                 <section class="transaction-control">
-                    <div class="action">
+                    <div class="actions">
                         <h3>Add Transaction</h3>
                         <form class="add">
                             <input type="text" name="source" placeholder="Sourece" autocomplete="off">
@@ -28,20 +28,23 @@
                     </div>
                     <div class="stats">
                         <h3>Statistics</h3>
-                        <p class="balane">B
+                        <p class="balance">B
                             alance : $<span id="balane">651</span>
                         </p>
                         <p class="income">
-                            Income : $<span id="income"700></span>
+                            Income : $<span id="income">700</span>
                         </p>
-                        <p class="expence">
+                        <p class="expense">
                             Expense : $<span id="expense">49</span>
                         </p>
                     </div>
                 </section>
 
-                <scetion class="transaction-history">
+                <section class="transaction-history">
                     <h3>Transaction History</h3>
+
+                        <div class="records">
+
                     <div class="income">
                         <h3>Income</h3>
                         <ul class="income-list">
@@ -49,7 +52,7 @@
                             <li>
                                 <p>
                                     <span>Freelancing - JS Project</span>
-                                    <span>time</span>
+                                    <span id="time">time</span>
                                 </p>
                                 <span>$700</span>
                                 <i class="bi bi-trash-fill delete"></i>
@@ -64,14 +67,16 @@
                         <li>
                             <p>
                                 <span>Streaming Room</span>
-                                <span>time</span>
+                                <span id="time">time</span>
                             </p>
                             <span>$749</span>
                             <i class="bi bi-trash-fill delete"></i>
                         </li>
                     </ul>
                     </div>
-                </scetion>
+
+                </div>
+                </section>
             </div>
         </div>
 
