@@ -44,7 +44,7 @@ function addTransaction(source, amount){
 
 form.addEventListener("submit", event =>{
     event.preventDefault();
-    addTransaction(form.source.value, form.amount.value);
+    addTransaction(form.source.value, Number(form.amount.value));
     form.reset();
   
 });
@@ -59,3 +59,27 @@ function getTaransactions(){
     });
 }
 getTaransactions();
+
+function deletTransaction(id){
+    transactions = transactions.filter(transaction => {
+        console.log(transaction.id, id)
+        return transaction.id !== id;
+    });
+    console.log(transactions);
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+}
+
+
+incomeList.addEventListener("click", event => {
+    if(event.target.classList.contains("delete")){
+        event.target.parentElement.remove();
+        deletTransaction(Number(event.target.parentElement.dataset.id));
+    }
+});
+
+expenseList.addEventListener("click", event => {
+    if(event.target.classList.contains("delete")){
+        event.target.parentElement.remove();
+        deletTransaction(Number(event.target.parentElement.dataset.id));
+    }
+})
