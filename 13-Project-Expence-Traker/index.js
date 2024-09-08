@@ -5,9 +5,6 @@ const incomeList = document.querySelector("ul.income-list");
 const expenseList = document.querySelector("ul.expense-list");
 let transactions = localStorage.getItem("transactions") !== null ? JSON.parse(localStorage.getItem("transactions")) : [];
 
-incomeList.addEventListener("click", event => {
-    console.log("nimesh");
-});
 
 function genarateTemplate(id, source, amount, time){
     return `<li data-id="${id}">
@@ -52,3 +49,13 @@ form.addEventListener("submit", event =>{
   
 });
 
+function getTaransactions(){ 
+    transactions.forEach(transaction => {
+        if(transaction.amount > 0){
+            incomeList.innerHTML += genarateTemplate(transaction.id, transaction.source, transaction.amount, transaction.time);
+        }else{
+            expenseList.innerHTML += genarateTemplate(transaction.id, transaction.source, transaction.amount, transaction.time);
+        }
+    });
+}
+getTaransactions();
