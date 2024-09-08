@@ -3,6 +3,7 @@
 const form = document.querySelector(".add");
 const incomeList = document.querySelector("ul.income-list");
 const expenseList = document.querySelector("ul.expense-list");
+const erroMessage = document.querySelector(".erromsg");
 
 const balance = document.querySelector("#balane");
 const income = document.querySelector("#income");
@@ -66,8 +67,14 @@ function addTransaction(source, amount){
 
 form.addEventListener("submit", event =>{
     event.preventDefault();
-    addTransaction(form.source.value, Number(form.amount.value));
+
+    if(form.source.value.trim() === "" || form.amount.vlaue === ""){
+       return erroMessage.innerText = "Please add Proper Values..!";
+    }
+    
+    addTransaction(form.source.value.trim(), Number(form.amount.value));
     updateStatistics(); 
+    erroMessage.innerText = "";
     form.reset();
   
 });
@@ -116,4 +123,4 @@ function init(){
     updateStatistics(); 
 }
 
-init();
+init(); 

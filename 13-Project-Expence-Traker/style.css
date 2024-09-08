@@ -59,6 +59,7 @@ h3{
     flex-wrap: wrap;
     gap: 10px;
     margin: 30px auto;
+    text-align: center;
 }
 
 .transaction-control .actions, .transaction-control .stats{
@@ -92,6 +93,11 @@ h3{
     box-shadow: var(--box-shadow);
 }
  
+.erromsg{
+    font-size: 16px;
+    font-weight: 300;
+    color: #d01349;
+}
 .stats p{
     background-color: #2666cf;
     margin: 20px 10px;
