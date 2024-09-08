@@ -3,8 +3,30 @@
 const form = document.querySelector(".add");
 const incomeList = document.querySelector("ul.income-list");
 const expenseList = document.querySelector("ul.expense-list");
+
+const balance = document.querySelector("#balane");
+const income = document.querySelector("#income");
+const expense = document.querySelector("#expense");
+
 let transactions = localStorage.getItem("transactions") !== null ? JSON.parse(localStorage.getItem("transactions")) : [];
 
+
+function updateStatistics(){
+    const updatedIncome = transactions
+    .filter(transaction => transaction.amount > 0)
+    .reduce((total, transaction) => total += Number(transaction.amount), 0)
+
+
+    const updatedExpense = transactions
+    .filter(transaction => transaction.amount < 0)
+    .reduce((total, transaction) => total += Math.abs(Number(transaction.amount)), 0)
+
+    income.textContent = updatedIncome;
+    expense.textContent = updatedExpense;
+    balance.textContent = updatedIncome - updatedExpense;
+
+
+}
 
 function genarateTemplate(id, source, amount, time){
     return `<li data-id="${id}">
@@ -45,6 +67,7 @@ function addTransaction(source, amount){
 form.addEventListener("submit", event =>{
     event.preventDefault();
     addTransaction(form.source.value, Number(form.amount.value));
+    updateStatistics(); 
     form.reset();
   
 });
@@ -58,15 +81,15 @@ function getTaransactions(){
         }
     });
 }
-getTaransactions();
+
 
 function deletTransaction(id){
     transactions = transactions.filter(transaction => {
-        console.log(transaction.id, id)
         return transaction.id !== id;
     });
-    console.log(transactions);
     localStorage.setItem("transactions", JSON.stringify(transactions));
+     updateStatistics(); 
+
 }
 
 
@@ -74,6 +97,8 @@ incomeList.addEventListener("click", event => {
     if(event.target.classList.contains("delete")){
         event.target.parentElement.remove();
         deletTransaction(Number(event.target.parentElement.dataset.id));
+         updateStatistics(); 
+
     }
 });
 
@@ -81,5 +106,14 @@ expenseList.addEventListener("click", event => {
     if(event.target.classList.contains("delete")){
         event.target.parentElement.remove();
         deletTransaction(Number(event.target.parentElement.dataset.id));
+        updateStatistics(); 
+
     }
-})
+});
+
+function init(){
+    getTaransactions();
+    updateStatistics(); 
+}
+
+init();
