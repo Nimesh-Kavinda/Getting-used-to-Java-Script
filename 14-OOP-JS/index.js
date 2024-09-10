@@ -47,21 +47,65 @@
 
 //** Classes */
 
+// class User {
+//     constructor(username, age){
+//         this.username = username;
+//         this.age = age;
+//     }
+// }
+
+// const userOne = new User("Kavinda", 32);
+// console.log(userOne);
+
+// const userTwo = new User("Adithya", 35);
+// console.log(userTwo);
+
+
+// console.log(userOne.username);
+
+// const userThree = new User("Dimuth", 24);
+// console.log(userThree.username);
+
+
+///***Methods */
+
 class User {
     constructor(username, age){
         this.username = username;
         this.age = age;
+        this.active = false;
+    }
+    login(){
+        this.active = true;
+        return this;
+        
+    }
+    logout(){
+        this.active = false;
+        return this;
+    }
+    display(){
+        if(this.active){
+        console.log(`Username: ${this.username}, Age: ${this.age}`);
+
+        }else{
+            console.log("Please login first");
+        }
     }
 }
 
 const userOne = new User("Kavinda", 32);
-console.log(userOne);
-
-const userTwo = new User("Adithya", 35);
-console.log(userTwo);
+userOne.login().display();
 
 
-console.log(userOne.username);
 
-const userThree = new User("Dimuth", 24);
-console.log(userThree.username);
+// const userTwo = new User("Adithya", 35);
+// console.log(userTwo.active);
+// userTwo.login();
+// userTwo.logout();
+
+
+
+
+// const userThree = new User("Dimuth", 24);
+// console.log(userThree.username);
