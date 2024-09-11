@@ -189,41 +189,85 @@
 
 //** Prototype Inheritance */
 
-function User(username, age){
-    this.username = username;
-    this.age = age;
-    this.active = false;
+// function User(username, age){
+//     this.username = username;
+//     this.age = age;
+//     this.active = false;
+// }
+
+// User.prototype.login = function(){
+//     console.log("Login");
+// }
+
+// User.prototype.logout = function(){
+//     console.log("Logout");
+// }
+
+// function Student(username, age, semester, rank){
+//     User.call(this, username, age);
+//     this.semester =semester;
+//     this.rank = rank;
+// }
+
+// Student.prototype = Object.create(User.prototype);
+
+// Student.prototype.updateRank = function(newRank){
+//     this.rank = newRank;
+//     console.log(this.rank);
+// }
+
+
+// console.log(User.prototype);
+// console.log(Student.prototype);
+
+// const userOne = new User("Nimesh", 35);
+// console.log(userOne.username);
+// userOne.logout();
+
+// const studentOne = new Student("jone", 60, 5 ,12);
+// console.log(studentOne.username);
+// studentOne.updateRank(16);
+
+//** Built In Methods */
+
+
+///** Static Keyword */
+
+class Claculator{
+    static result = 0;
+
+    static add(number){
+        Claculator.result += number;
+    }
+
+    static sub(number){
+        this.result -= number;
+    }
+
+    static mul(number){
+        this.result *= number;
+    }
+
+    static div(number){
+        this.result /= number;
+    }
 }
 
-User.prototype.login = function(){
-    console.log("Login");
-}
-
-User.prototype.logout = function(){
-    console.log("Logout");
-}
-
-function Student(username, age, semester, rank){
-    User.call(this, username, age);
-    this.semester =semester;
-    this.rank = rank;
-}
-
-Student.prototype = Object.create(User.prototype);
-
-Student.prototype.updateRank = function(newRank){
-    this.rank = newRank;
-    console.log(this.rank);
-}
+console.log(Claculator.result);
 
 
-console.log(User.prototype);
-console.log(Student.prototype);
+Claculator.sub(5);
+console.log(Claculator.result);
 
-const userOne = new User("Nimesh", 35);
-console.log(userOne.username);
-userOne.logout();
+Claculator.add(21);
+console.log(Claculator.result);
+ 
+Claculator.mul(2);
+console.log(Claculator.result);
 
-const studentOne = new Student("jone", 60, 5 ,12);
-console.log(studentOne.username);
-studentOne.updateRank(16);
+Claculator.div(4);
+console.log(Claculator.result);
+
+
+
+
