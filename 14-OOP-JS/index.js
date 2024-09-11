@@ -233,41 +233,67 @@
 
 ///** Static Keyword */
 
-class Claculator{
-    static result = 0;
+// class Claculator{
+//     static result = 0;
 
-    static add(number){
-        Claculator.result += number;
+//     static add(number){
+//         Claculator.result += number;
+//     }
+
+//     static sub(number){
+//         this.result -= number;
+//     }
+
+//     static mul(number){
+//         this.result *= number;
+//     }
+
+//     static div(number){
+//         this.result /= number;
+//     }
+// }
+
+// console.log(Claculator.result);
+
+
+// Claculator.sub(5);
+// console.log(Claculator.result);
+
+// Claculator.add(21);
+// console.log(Claculator.result);
+ 
+// Claculator.mul(2);
+// console.log(Claculator.result);
+
+// Claculator.div(4);
+// console.log(Claculator.result);
+
+
+///** Getter and Setter */
+
+class User{
+    constructor(first, last){
+        this.first = first;
+        this.last = last;
     }
-
-    static sub(number){
-        this.result -= number;
+     get fullName(){
+        return `${this.first} ${this.last}`;
     }
-
-    static mul(number){
-        this.result *= number;
-    }
-
-    static div(number){
-        this.result /= number;
+    set fullName(newValue){
+        const [first, last] = newValue.split(" ");
+        this.first = first;
+        this.last = last;
     }
 }
 
-console.log(Claculator.result);
+const guest = new User("nimesh" , "Kavinda");
+console.log(guest.first);
+console.log(guest.last);
+console.log(guest.fullName);
 
-
-Claculator.sub(5);
-console.log(Claculator.result);
-
-Claculator.add(21);
-console.log(Claculator.result);
- 
-Claculator.mul(2);
-console.log(Claculator.result);
-
-Claculator.div(4);
-console.log(Claculator.result);
-
+guest.first = "Dimuth";
+guest.fullName = "Dimuth Adithya";
+console.log(guest.fullName);
 
 
 
