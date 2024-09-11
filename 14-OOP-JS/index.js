@@ -69,6 +69,50 @@
 
 ///***Methods */
 
+// class User {
+//     constructor(username, age){
+//         this.username = username;
+//         this.age = age;
+//         this.active = false;
+//     }
+//     login(){
+//         this.active = true;
+//         return this;
+        
+//     }
+//     logout(){
+//         this.active = false;
+//         return this;
+//     }
+//     display(){
+//         if(this.active){
+//         console.log(`Username: ${this.username}, Age: ${this.age}`);
+
+//         }else{
+//             console.log("Please login first");
+//         }
+//     }
+// }
+
+// const userOne = new User("Kavinda", 32);
+// userOne.login().display();
+
+
+
+// const userTwo = new User("Adithya", 35);
+// console.log(userTwo.active);
+// userTwo.login();
+// userTwo.logout();
+
+
+
+
+// const userThree = new User("Dimuth", 24);
+// console.log(userThree.username);
+
+
+//** Inheritance */
+
 class User {
     constructor(username, age){
         this.username = username;
@@ -94,18 +138,33 @@ class User {
     }
 }
 
+class Student extends User{
+    constructor(username, age, semester, rank){
+        super(username, age);
+        this.semester = semester;
+        this.rank = rank;
+    }
+    updateRank(newRank){
+        this.rank = newRank;
+        console.log(this.rank);
+    } 
+    display(){
+        if(this.active){
+        console.log(`Username: ${this.username}, Age: ${this.age} Semester: ${this.semester}, Rank: ${this.rank} `);
+
+        }else{
+            console.log("Please login first");
+        }
+    }
+}
+
+
+
 const userOne = new User("Kavinda", 32);
 userOne.login().display();
 
-
-
-// const userTwo = new User("Adithya", 35);
-// console.log(userTwo.active);
-// userTwo.login();
-// userTwo.logout();
+const studentOne = new Student("Jone", 60, 5, 10);
+studentOne.login().display();
 
 
 
-
-// const userThree = new User("Dimuth", 24);
-// console.log(userThree.username);
