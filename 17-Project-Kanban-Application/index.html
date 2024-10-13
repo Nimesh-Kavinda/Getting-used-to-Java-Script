@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban App</title>
+    <link rel="icon" type="image/x-icon" href="./images/search.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main>
+
+
+        
+        <div class="outer-warp">
+            <div class="inner-warp">
+                <section class="heading">
+                    <p class="title">notNotions</p>
+                    <p class="subtitel">Web-based Kanban Application to Handel Project Progress</p>
+                </section>
+                <section class="kanban">
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>TODO</p>
+                            <span class="todo">2</span>
+                        </div>
+                        <div class="cards todo">
+                            <form class="card">
+                                <input value="TEST" type="text" name="task" autocomplete="off" disabled= "disabled" >
+                                <div>
+                                    <span class="task-id">#92522</span>
+                                    <span>
+                                        <button class="bi bi-pencil edit" data-id=""></button>
+                                        <button class="bi bi-check-lg update hide" data-id=""></button>
+                                        <button class="bi bi-trash3 delete" data-id=""></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" max="30">
+                            <button class="bi bi-plus" data-id="" name="submit"></button>
+                        </form>
+                    </div>
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>In Progress</p>
+                            <span class="pending">1</span>
+                        </div>
+                        <div class="cards pending">
+                            <form class="card">
+                                <input value="TEST" type="text" name="task" autocomplete="off" disabled= "disabled" >
+                                <div>
+                                    <span class="task-id">#92522</span>
+                                    <span>
+                                        <button class="bi bi-pencil edit" data-id=""></button>
+                                        <button class="bi bi-check-lg update hide" data-id=""></button>
+                                        <button class="bi bi-trash3 delete" data-id=""></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" max="30">
+                            <button class="bi bi-plus" data-id="" name="submit"></button>
+                        </form>
+                    </div>
+                    <div class="taskbox">
+                        <div class="title">
+                            <p>Completed</p>
+                            <span class="completed">3</span>
+                        </div>
+                        <div class="cards completed">
+                            <form class="card">
+                                <input value="TEST" type="text" name="task" autocomplete="off" disabled= "disabled" >
+                                <div>
+                                    <span class="task-id">#92522</span>
+                                    <span>
+                                        <button class="bi bi-pencil edit" data-id=""></button>
+                                        <button class="bi bi-check-lg update hide" data-id=""></button>
+                                        <button class="bi bi-trash3 delete" data-id=""></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <form class="add">
+                            <input type="text" name="task" placeholder="New Task" autocomplete="off" max="30">
+                            <button class="bi bi-plus" data-id="" name="submit"></button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
