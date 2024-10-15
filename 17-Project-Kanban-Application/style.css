@@ -151,6 +151,10 @@
     
 }
 
+.card.dargging{
+    opacity: 0.4;
+}
+
 .add{
     display: flex;
 }

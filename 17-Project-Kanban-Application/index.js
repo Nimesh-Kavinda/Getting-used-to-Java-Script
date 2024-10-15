@@ -87,4 +87,31 @@ taskbox.forEach(column => {
 
         
     });
+
+    column.addEventListener("dragstart", event => {
+        if(event.target.classList.contains("card")){
+            event.target.classList.add("dargging");
+        }
+    });
+
+    column.addEventListener("dragover", event => {
+        const card = document.querySelector(".dargging");
+        column.appendChild(card);
+    });
+
+    column.addEventListener("dragend", event => {
+        if(event.target.classList.contains("card")){
+            event.target.classList.remove("dargging");
+
+            const taskId = event.target.dataset.id;
+            const columnId = event.target.parentElement.dataset.id;
+            const content = event.target.task.value;
+            Kanban.updateTask(taskId, {
+                columnId: columnId,
+                content: content
+            });
+
+        }
+    });
+
 });
