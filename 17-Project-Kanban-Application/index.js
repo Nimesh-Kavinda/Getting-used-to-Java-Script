@@ -73,8 +73,15 @@ taskbox.forEach(column => {
             Kanban.updateTask(taskId, {
                 columnId: columnId,
                 content: content
-                
+
             });
+
+        }
+
+        if(event.target.classList.contains("delete")){
+            event.preventDefault();
+            formInput.parentElement.remove();
+            Kanban.deleteTask(event.target.dataset.id);
 
         }
 

@@ -74,7 +74,10 @@ export default class Kanban {
                 return item.taskId == taskId;
             });
 
+            if(task){
             column.tasks.splice(column.tasks.indexOf(task), 1);
+            }
+
 
         }
 
