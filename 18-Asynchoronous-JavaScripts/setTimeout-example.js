@@ -1,3 +1,6 @@
+/* ---------- SetTimeout --------------- */
+
+
 console.log("A");
 
 
@@ -17,3 +20,6 @@ const welcome = function(){
 setTimeout(welcome,2000);
 
 console.log("D");
+
+
+
