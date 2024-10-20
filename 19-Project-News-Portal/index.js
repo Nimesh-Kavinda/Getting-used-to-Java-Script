@@ -5,11 +5,7 @@ const categorySpan = document.querySelectorAll(".category span");
 const baseUrl = "https://newsapi.org/v2";
 const apiKey = "&apiKey=68b1a09ae71249feaf154fee6547c822";
 
-// const urlUa = "https://newsapi.org/v2/top-headlines?country=us&apiKey=68b1a09ae71249feaf154fee6547c822";
-// const urlUb = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=68b1a09ae71249feaf154fee6547c822";
-// const urlT = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=68b1a09ae71249feaf154fee6547c822";
-// const urlC = "https://newsapi.org/v2/everything?q=crypto&sortBy=publishdAt&apiKey=68b1a09ae71249feaf154fee6547c822";
-
+const backupImage = "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 async function dataRequest(url){
     try{
@@ -27,7 +23,7 @@ function urlRequest(url){
         data.articles.forEach(item => {
             cards.innerHTML += `<div class="card">
                                     <div class="image">
-                                    <img src="${item.urlToImage}" alt="Default News Image">
+                                    <img src="${item.urlToImage ? item.urlToImage : backupImage }" alt="Default News Image">
                                     </div>
                                     <div class="information">
                                     <div>
@@ -53,7 +49,7 @@ function urlRequest(url){
 category.addEventListener("click" , event => {
     if(event.target.tagName === "SPAN"){
        cards.innerHTML = "";
-       urlRequest(event.target.dataset.id);
+       urlRequest(event.target.dataset.url);
        categorySpan.forEach(item => item.classList.remove("active"));
        event.target.classList.add("active");
     }
