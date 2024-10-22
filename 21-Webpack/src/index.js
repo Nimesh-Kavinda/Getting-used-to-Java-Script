@@ -1,12 +1,8 @@
-let p = document.querySelector("p");
-p.textContent = "Watcher Runnig All Time";
+import {welcome, updatePara} from "./helper.js";
+import {names} from "./data.js"
 
+names.array.forEach(name => {
+    welcome(name);
+});
 
-let studentName = "Nimesh";
-
-const welcome = () => {
-    console.log(`Welocme ${studentName}`);
-};
-
-
-welcome();
+updatePara("Updated File!");
