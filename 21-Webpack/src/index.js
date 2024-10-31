@@ -7,4 +7,3 @@ names.array.forEach(name => {
 
 updatePara("Updated File!");
 
-const name = "jhdjhjdhj";
