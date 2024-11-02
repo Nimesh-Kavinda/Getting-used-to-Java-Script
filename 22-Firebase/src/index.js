@@ -4,7 +4,7 @@ import { getFirestore, collection, getDocs, onSnapshot, addDoc, deleteDoc, doc, 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAxfDib__VrFYO65tSK7mnd4Di7aczbfbo",
+  apiKey: "-8525115-AIzaSyAxfDib__VrFYO65tSK7mnd4Di7aczbfbo",
   authDomain: "notnotion-131c3.firebaseapp.com",
   projectId: "notnotion-131c3",
   storageBucket: "notnotion-131c3.firebasestorage.app",
