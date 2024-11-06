@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notNotion - Your Custom Bookmark Manager</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/search.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <main>
+        <div class="outer-wrap">
+            <div class="inner-wrap">
+                <section class="heading">
+                    <p class="title">notNotion</p>
+                    <p class="sub-title">Your Custom Bookmark Manager</p>
+                </section>
+                <section class="create">
+                    <form class="add">
+                        <input type="text" name="link" placeholder="Link" autocomplete="off">
+                        <input type="text" name="title" placeholder="Title" autocomplete="off" maxlength="35">
+                        <select name="category">
+                            <option value="youtube">Youtube</option>
+                            <option value="netfilx">Netfilx</option>
+                            <option value="prime">Prime</option>
+                            <option value="other">Others</option>
+                        </select>
+                        <input type="submit" value="Bookmark">
+                    </form>
+                </section>
+                <section class="bookmark">
+                    <div class="category-list">
+                        <span class="active">All</span>
+                        <span>Youtube</span>
+                        <span>Netfilx</span>
+                        <span>Prime</span>
+                        <span>Others</span>
+                    </div>
+                    <div class="cards">
+                        <dic class="card">
+                            <p class="title">Lorem, ipsum dolor.</p>
+                            <div class="sub-information">
+                                <p>
+                                    <span class="category">Youtube</span>
+                                </p>
+                                <a href="" target=""><i class="bi bi-box-arrow-up-right webiste"></i></a>
+                                <a href="" target=""><i class="bi bi-google search"></i></a>
+                                <span><i class="bi bi-trash delete" data-id=""></i></span>
+                            </div>
+                        </dic>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+
+
+
+<script type="module" src="./index.js"></script>
+</body>
+</html>
