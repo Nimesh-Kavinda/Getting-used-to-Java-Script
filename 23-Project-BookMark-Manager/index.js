@@ -103,8 +103,11 @@ function filterCards(category){
 
 
 const categoryList = document.querySelector(".category-list");
+const categorySpan = document.querySelectorAll(".category-list span")
 categoryList.addEventListener("click", event => {
     if(event.target.tagName === "SPAN"){
         filterCards(event.target.innerText);
+        categorySpan.forEach(span => span.classList.remove("active"));
+        event.target.classList.add("active");
     }
 });
