@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-import {getFirestore, collection, addDoc, serverTimestamp, getDocs, deleteDoc, doc, } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+import {getFirestore, collection, addDoc, serverTimestamp, getDocs, deleteDoc, doc, query, where } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
 const firebaseConfig = {
 apiKey: "AIzaSyAApQaX-t-he1VGihaZDMv-2scGqdMVWIw",
 authDomain: "bookmark-9dcbc.firebaseapp.com",
