@@ -79,8 +79,11 @@ addForm.addEventListener("submit", event => {
 });
 
 
-function filterCards(){
-    const qRef = query(colRef, where("category", "==", event.target.innerText.toLowerCase()));
+function filterCards(category){
+    if(category === "All"){
+        showCard();
+    } else {
+        const qRef = query(colRef, where("category", "==", category.toLowerCase()));
 
         cards.innerHTML = "";
 
@@ -94,12 +97,14 @@ function filterCards(){
             .catch(error => {
                 console.log(error);
             });
+    }
+  
 }
 
 
 const categoryList = document.querySelector(".category-list");
 categoryList.addEventListener("click", event => {
     if(event.target.tagName === "SPAN"){
-        filterCards();
+        filterCards(event.target.innerText);
     }
 });
