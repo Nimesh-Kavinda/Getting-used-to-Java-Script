@@ -146,6 +146,22 @@
     color: white;
 }
 
+.card .sub-information .category.netfilx{
+    background-color: #b30103;
+}
+
+.card .sub-information .category.youtube{
+    background-color: #4d4d4d;
+}
+
+.card .sub-information .category.prime{
+    background-color: #1468c2;
+}
+
+.card .sub-information .category.other{
+    background-color: #c47600;
+}
+
 .card .sub-information i{
     margin: 7px;
     font-size: 18px;
