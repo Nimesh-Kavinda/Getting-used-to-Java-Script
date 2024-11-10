@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-import {getFirestore, collection, addDoc, serverTimestamp, getDocs} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
+import {getFirestore, collection, addDoc, serverTimestamp, getDocs, deleteDoc, doc} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js";
 const firebaseConfig = {
 apiKey: "AIzaSyAApQaX-t-he1VGihaZDMv-2scGqdMVWIw",
 authDomain: "bookmark-9dcbc.firebaseapp.com",
@@ -15,22 +15,18 @@ const app = initializeApp(firebaseConfig);
 const db =getFirestore();
 const colRef = collection(db, "bookmarks");
 
-const addForm = document.querySelector(".add");
-addForm.addEventListener("submit", event => {
-    event.preventDefault();
-
-    addDoc(colRef, {
-        link: addForm.link.value,
-        title: addForm.title.value,
-        category: addForm.category.value,
-        createdAt: serverTimestamp()
-    })
-    .then(() => {
-        addForm.reset();
-        showCard();
-    })
-});
-
+function deleteEvent(){
+    const deleteBtns = document.querySelectorAll("i.delete");
+deleteBtns.forEach(button => {
+    button.addEventListener("click", event => {
+        const deleteRef = doc(db, "bookmarks", button.dataset.id);
+        deleteDoc(deleteRef)
+            .then(() => {
+                button.parentElement.parentElement.parentElement.remove();
+            })
+    });
+})
+}
 
 function genarateTemplate(response,id){
     return `<div class="card">
@@ -48,7 +44,7 @@ function genarateTemplate(response,id){
 
 const cards = document.querySelector(".cards");
 function showCard(){
-    
+
     cards.innerHTML = "";
 
     getDocs(colRef)
@@ -56,6 +52,7 @@ function showCard(){
         data.docs.forEach(document => {
             cards.innerHTML += genarateTemplate(document.data(), document.id);
         })
+        deleteEvent();
     })
     .catch(error => {
         console.log(error);
@@ -63,4 +60,20 @@ function showCard(){
 }  
 
 showCard();
+
     
+const addForm = document.querySelector(".add");
+addForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    addDoc(colRef, {
+        link: addForm.link.value,
+        title: addForm.title.value,
+        category: addForm.category.value,
+        createdAt: serverTimestamp()
+    })
+    .then(() => {
+        addForm.reset();
+        showCard();
+    })
+});
