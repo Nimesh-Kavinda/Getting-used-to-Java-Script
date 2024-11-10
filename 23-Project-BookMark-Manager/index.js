@@ -82,6 +82,19 @@ addForm.addEventListener("submit", event => {
 const categoryList = document.querySelector(".category-list");
 categoryList.addEventListener("click", event => {
     if(event.target.tagName === "SPAN"){
-        console.log(event.target.innerText);
+        const qRef = query(colRef, where("category", "==", event.target.innerText.toLowerCase()));
+
+        cards.innerHTML = "";
+
+        getDocs(qRef)
+            .then(data => {
+                data.docs.forEach(document => {
+                    cards.innerHTML += genarateTemplate(document.data(), document.id);
+                })
+                deleteEvent();
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 });
