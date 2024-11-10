@@ -27,6 +27,7 @@ addForm.addEventListener("submit", event => {
     })
     .then(() => {
         addForm.reset();
+        showCard();
     })
 });
 
@@ -36,19 +37,30 @@ function genarateTemplate(response,id){
                             <p class="title">${response.title}</p>
                             <div class="sub-information">
                                 <p>
-                                    <span class="category ${response.category}">${response.category}</span>
+                                    <span class="category ${response.category}">${response.category[0].toUpperCase()}${response.category.slice(1)}</span>
                                 </p>
                                 <a href="${response.link}" target=""><i class="bi bi-box-arrow-up-right webiste"></i></a>
-                                <a href="" target=""><i class="bi bi-google search"></i></a>
+                                <a href="https://www.google.com/search?q=${response.title}" target=""><i class="bi bi-google search"></i></a>
                                 <span><i class="bi bi-trash delete" data-id="${id}"></i></span>
                             </div>
                         </div`;
 }
 
 const cards = document.querySelector(".cards");
-getDocs(colRef)
+function showCard(){
+    
+    cards.innerHTML = "";
+
+    getDocs(colRef)
     .then(data => {
         data.docs.forEach(document => {
             cards.innerHTML += genarateTemplate(document.data(), document.id);
         })
     })
+    .catch(error => {
+        console.log(error);
+    });
+}  
+
+showCard();
+    
