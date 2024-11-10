@@ -79,10 +79,8 @@ addForm.addEventListener("submit", event => {
 });
 
 
-const categoryList = document.querySelector(".category-list");
-categoryList.addEventListener("click", event => {
-    if(event.target.tagName === "SPAN"){
-        const qRef = query(colRef, where("category", "==", event.target.innerText.toLowerCase()));
+function filterCards(){
+    const qRef = query(colRef, where("category", "==", event.target.innerText.toLowerCase()));
 
         cards.innerHTML = "";
 
@@ -96,5 +94,12 @@ categoryList.addEventListener("click", event => {
             .catch(error => {
                 console.log(error);
             });
+}
+
+
+const categoryList = document.querySelector(".category-list");
+categoryList.addEventListener("click", event => {
+    if(event.target.tagName === "SPAN"){
+        filterCards();
     }
 });
