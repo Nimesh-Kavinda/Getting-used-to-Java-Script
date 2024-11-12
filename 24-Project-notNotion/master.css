@@ -15,3 +15,31 @@
     list-style: none;
 
 }
+
+body{
+    background-color: white;
+}
+
+main{
+    /* to stick fotter at bottom */
+    min-height: 85vh; 
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+.header{
+    background-color: white;
+}
+
+.header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    padding: 0px 20px;
+    border-bottom: 1px solid #0000001a;
+}
