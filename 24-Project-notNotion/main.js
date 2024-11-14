@@ -6,3 +6,16 @@ hamburger.addEventListener("click", event => {
     nav.classList.toggle("active");
 });
 
+const newsLetterButton = document.querySelectorAll(".newsletter");
+const modal = document.querySelector(".modal");
+const closeButton = document.querySelector(".close");
+
+newsLetterButton.forEach(button => {
+    button.addEventListener("click", () => {
+        modal.classList.add("show");
+    });
+});
+
+closeButton.addEventListener("click", () => {
+    modal.classList.remove("show");
+});
