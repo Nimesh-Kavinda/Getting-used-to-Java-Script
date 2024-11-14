@@ -19,3 +19,12 @@ newsLetterButton.forEach(button => {
 closeButton.addEventListener("click", () => {
     modal.classList.remove("show");
 });
+
+
+const accordions = document.querySelectorAll(".accordions .title");
+accordions.forEach(accordion => {
+    accordion.addEventListener("click", event => {
+        accordion.classList.toggle("active");
+        event.target.nextElementSibling.classList.toggle("active");
+    });
+});
